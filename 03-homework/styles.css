@@ -2,6 +2,10 @@ body {
     background-color: #E5E5E5;
 }
 
+button:hover {
+    background-color: #e69900;
+}
+
 /*Block 1*/
 #banner-1 {
     background: #0B2239;
