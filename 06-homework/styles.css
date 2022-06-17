@@ -29,6 +29,7 @@ body {
 .bold-header {
     font-weight: 600;
     color: #212353;
+
 }
 
 .container {
@@ -230,7 +231,6 @@ body {
 
 }
 
-
 .features-blocks {
     display: flex;
     flex-wrap: wrap;
@@ -365,7 +365,7 @@ body {
     color: #212353;
 }
 
-.testimonials-content p {
+.testimonials-content a {
     width: 148.6px;
     height: 22px;
     font-style: normal;
@@ -374,6 +374,7 @@ body {
     line-height: 160%;
     letter-spacing: 0.01em;
     color: #9C69E2;
+    text-decoration: none;
 }
 
 .testimonials-text article {
