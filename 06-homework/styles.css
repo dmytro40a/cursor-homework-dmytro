@@ -497,6 +497,15 @@ body {
 
 /* About */
 
+hr {
+    position: absolute;
+    margin-top: -100px;
+    width: 100%;
+    height: 2px;
+    background: #9C69E2;
+    opacity: 0.2;
+}
+
 .footer-about-content {
     display: flex;
 }
