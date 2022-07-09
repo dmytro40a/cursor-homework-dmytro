@@ -1,0 +1,187 @@
+.lightsabers {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    cursor: pointer;
+    background: url(./img/stars-background.jpg)
+}
+
+.first-sword,
+.second-sword,
+.third-sword {
+    width: 150px;
+    height: 10px;
+    background-color: rgb(150, 150, 150);
+    margin-bottom: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+.second-sword,
+.third-sword {
+    transition-duration: 0.8s;
+    transition-property: background-color, transform, shadow;
+}
+
+.lightsaber {
+    width: 20px;
+    height: 10px;
+    background-color: #000000;
+    margin-left: 5px;
+    animation-name: sword-hide;
+}
+
+.lightsaber-second {
+    width: 20px;
+    height: 10px;
+    background-color: #000000;
+    margin-left: 125px;
+}
+
+.lightsabers:hover>.first-sword {
+    animation-name: sword-hide;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.lightsabers:hover>.second-sword {
+    transform: rotate(50deg);
+    transition-duration: 1s;
+    animation-fill-mode: forwards;
+    margin-bottom: -8px;
+    background-color: rgb(66, 66, 231);
+    box-shadow: 0 0 5px 4px rgb(154, 154, 255);
+}
+
+.lightsabers:hover>.third-sword {
+    transform: rotate(-50deg);
+    transition-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    background-color: rgb(238, 49, 49);
+    box-shadow: 0 0 5px 4px rgb(255, 125, 125);
+}
+
+@keyframes sword-hide {
+    0% {
+        transform: translateY(-200%);
+        box-shadow: 0 0 5px 4px rgb(150, 248, 248);
+    }
+
+    100% {
+        background-color: transparent;
+        border: none;
+    }
+}
+
+.craddle {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    padding-top: 150px;
+}
+
+.ball {
+    width: 60px;
+    height: 60px;
+    border-radius: 80px;
+    background: linear-gradient(0deg, rgba(70, 215, 189, 1) 5%, rgba(45, 60, 253, 1) 95%);
+    position: relative;
+}
+
+.ball:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 100px;
+    right: 0;
+    bottom: 0px;
+    margin-left: 10px;
+    box-shadow: -6px 25px 7px 4px rgb(65 60 60 / 20%);
+}
+
+.ball:nth-child(1) {
+    position: relative;
+    animation: first-ball 2s linear infinite alternate;
+    background: rgba(45, 60, 253, 1);
+}
+
+.ball:nth-child(2) {
+    background: linear-gradient(-90deg, rgba(70, 215, 189, 1) 5%, rgba(45, 60, 253, 1) 95%);
+}
+
+.ball:nth-child(3) {
+    background: rgba(70, 215, 189, 1);
+}
+
+.ball:nth-child(4) {
+    background: rgb(59, 204, 178);
+}
+
+.ball:nth-child(5) {
+    background: rgb(5, 177, 177);
+}
+
+.ball:nth-child(6) {
+    background: rgb(0, 159, 159);
+}
+
+.ball:nth-child(7) {
+    position: relative;
+    animation: last-ball 2s linear infinite alternate;
+    animation-delay: 1s;
+    background: rgb(1, 143, 143);
+}
+
+@keyframes first-ball {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(40deg) translate(-150px);
+    }
+
+    75% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+
+    }
+}
+
+@keyframes last-ball {
+    0% {
+        transform: rotate(0deg);
+
+    }
+
+    25% {
+        transform: rotate(0deg);
+
+    }
+
+    50% {
+        transform: rotate(-40deg) translate(150px);
+    }
+
+    75% {
+        transform: rotate(0deg);
+
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
