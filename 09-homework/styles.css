@@ -10,8 +10,7 @@ a:hover {
 
 header {
     font-family: 'Lato', sans-serif;
-    background: #F4F6F9;
-    padding-bottom: 12%;
+    background-color: #F4F6F9;
 }
 
 @font-face {
@@ -21,6 +20,11 @@ header {
 
 .header-content {
     padding-left: 10%;
+    background-image: url(./img/phones.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    padding-bottom: 12%;
+
 }
 
 .logo {
@@ -118,6 +122,7 @@ header {
     position: relative;
     margin-left: 10%;
     padding: 20% 34% 0 0;
+    z-index: 3;
 }
 
 .txt-header {
@@ -178,7 +183,8 @@ header {
 
 .gs-img {
     position: absolute;
-    left: 5%;
+    left: 0;
+    max-width: 100%;
 }
 
 .gs-img-mob {
@@ -246,8 +252,8 @@ header {
 }
 
 .comment-cards {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    display: flex;
+    overflow-x: hidden;
     gap: 3%;
     position: relative;
 }
@@ -277,10 +283,10 @@ header {
 }
 
 .featured-box {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 79px;
-    padding: 58px 179px 68px 180px;
+    padding: 58px 179px 68px 178px;
     justify-content: center;
 }
 
@@ -290,6 +296,10 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 483px;
+}
+
+.phones-desktop {
+    max-width: 100%;
 }
 
 .right-box {
@@ -332,8 +342,7 @@ footer {
 }
 
 .nav-menu {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
     list-style: none;
 }
 
@@ -352,8 +361,8 @@ footer {
 
 .socials {
     display: flex;
-    justify-content: end;
-    padding-left: 43%;
+    position: absolute;
+    right: 10%;
 }
 
 .socials>svg {
@@ -379,6 +388,7 @@ footer {
     .header-content {
         align-items: center;
         padding: 0 20px;
+        background-image: none;
     }
 
     .logo {
@@ -593,7 +603,8 @@ footer {
     }
 
     .socials {
-        padding: 0 0 34px 0;
+        position: relative;
+        padding: 0 0 34px 35px;
     }
 
     .socials>svg {
