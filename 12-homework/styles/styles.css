@@ -259,7 +259,7 @@ p {
 .pricing__title .pricing__description {
   color: #37447e;
 }
-.pricing p {
+.pricing__words {
   color: #5d6970;
   padding-top: 60px;
   padding-bottom: 9px;
