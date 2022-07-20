@@ -1,0 +1,103 @@
+// colors
+$textColor: #505f98;
+$mainTextColor: #6f7cb2;
+$logoColor: #37447e;
+$textFooterColor: #929ecc;
+$titleColor: #091133;
+$btnColor: #111b47;
+$grey: #5d6970;
+$white: #ffffff;
+
+// text sizes
+$ui-xxs: 14px;
+$ui-xs: 16px;
+$ui-s: 18px;
+$ui-m: 26px;
+$ui-l: 36px;
+$ui-xl: 50px;
+
+// title style
+
+@mixin titleStyle {
+  font-weight: 500;
+  line-height: 48px;
+  font-size: $ui-l;
+  color: $titleColor;
+}
+
+@mixin titleStyle--mobile {
+  font-weight: 500;
+  line-height: 45px;
+  font-size: $ui-l;
+  color: $titleColor;
+}
+
+// sizes
+$primaryPadding: 0 165px;
+
+// buttons
+@mixin btnHeader {
+  background: $btnColor;
+  border-radius: 3px;
+  padding: 4px 60px;
+  margin-left: 4%;
+  cursor: pointer;
+}
+
+@mixin btnHeaderFooterText {
+  font-weight: 500;
+  line-height: 26px;
+  font-size: $ui-xs;
+  text-align: center;
+  color: $white;
+}
+
+@mixin btnFirst {
+  background: $btnColor;
+  border-radius: 3px;
+  padding: 3px 45px;
+  margin-right: 30px;
+  cursor: pointer;
+}
+@mixin btnFirstText {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  color: $white;
+}
+@mixin btnSecond {
+  border: 2px solid $titleColor;
+  border-radius: 3px;
+  background-color: transparent;
+  padding: 3px 45px;
+  cursor: pointer;
+}
+
+@mixin btnSecondText {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  color: $titleColor;
+}
+@mixin btnThird {
+  background: $btnColor;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+@mixin btnThirdFourthText {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: $white;
+}
+
+@mixin btnFourth {
+  background: $btnColor;
+  padding: 2px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}

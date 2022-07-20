@@ -1,0 +1,462 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap");
+@import "variables";
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: $white;
+}
+a {
+  text-decoration: none;
+}
+
+p {
+  color: $mainTextColor;
+  font-size: $ui-xs;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+// HEADER
+.wrapper {
+  background-image: url(/12-homework/assets/img/header_background.png);
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: $primaryPadding;
+  padding-top: 18px;
+  align-items: center;
+
+  &__logo {
+    a {
+      font-size: $ui-m;
+      color: $logoColor;
+      font-weight: 900;
+      line-height: 38px;
+    }
+  }
+  &__btn {
+    @include btnHeader;
+    a {
+      @include btnHeaderFooterText;
+    }
+  }
+  &__btn:hover {
+    background-color: transparent;
+    a {
+      color: $btnColor;
+    }
+  }
+}
+.navigation {
+  ul {
+    display: flex;
+  }
+  &__links {
+    margin-right: 60px;
+    a {
+      color: $textColor;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+  li:last-child {
+    margin: 0;
+  }
+  &__bar {
+    display: none;
+  }
+}
+
+.home {
+  display: flex;
+  background-image: url(/12-homework/assets/img/header_img.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  padding-bottom: 430px;
+
+  &__content {
+    width: 40%;
+    padding-left: 165px;
+    padding-top: 245px;
+    h1 {
+      color: $titleColor;
+      font-size: $ui-xl;
+      font-weight: 500;
+      line-height: 66px;
+      letter-spacing: 1px;
+      padding-bottom: 20px;
+    }
+    p {
+      font-size: $ui-s;
+      color: $textColor;
+      font-weight: 400;
+      line-height: 30px;
+      padding-bottom: 69px;
+    }
+  }
+  &__btn--first {
+    @include btnFirst;
+    a {
+      @include btnFirstText;
+    }
+  }
+  &__btn--second {
+    @include btnSecond;
+    a {
+      @include btnSecondText;
+    }
+  }
+  &__btn--first:hover {
+    background-color: transparent;
+    a {
+      color: $btnColor;
+    }
+  }
+  &__btn--second:hover {
+    background-color: $btnColor;
+    a {
+      color: $white;
+    }
+  }
+}
+
+// MAIN
+
+.main {
+  padding: $primaryPadding;
+}
+
+.about-us {
+  display: flex;
+  padding-top: 100px;
+  &__container {
+    padding-top: 40px;
+    h2 {
+      @include titleStyle;
+    }
+  }
+  &__description {
+    p {
+      padding-top: 16px;
+      width: 85%;
+    }
+  }
+  &__box {
+    display: flex;
+    padding-top: 80px;
+    padding-bottom: 162px;
+  }
+  &__content {
+    h4 {
+      color: $titleColor;
+      font-size: $ui-xs;
+      font-weight: 500;
+      line-height: 26px;
+      padding-top: 14px;
+      padding-bottom: 6px;
+    }
+    p {
+      color: $grey;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      width: 80%;
+    }
+  }
+}
+
+.services {
+  &__card--img {
+    width: 60%;
+  }
+  &__card {
+    padding-top: 30px;
+    width: 40%;
+    .services__button {
+      @include btnThird;
+      margin-top: 24px;
+      padding: 4px 40px;
+      a {
+        @include btnThirdFourthText;
+      }
+    }
+    .services__button:hover {
+      background-color: transparent;
+      a {
+        color: $btnColor;
+      }
+    }
+
+    h3 {
+      @include titleStyle;
+    }
+  }
+  &__description {
+    p {
+      padding-top: 16px;
+    }
+  }
+}
+
+.first_card,
+.second_card,
+.third_card {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 150px;
+}
+
+.pricing {
+  padding: 0 250px;
+  padding-bottom: 130px;
+  text-align: center;
+  background-image: url(/12-homework/assets/img/footer_background.png);
+  background-size: cover;
+  h2 {
+    @include titleStyle;
+    padding-top: 237px;
+    padding-bottom: 16px;
+  }
+  &__title {
+    p {
+      padding: 0 210px;
+    }
+    h3 {
+      font-size: $ui-xl;
+      color: #222f65;
+      font-weight: 500;
+      line-height: 66px;
+      text-align: center;
+      letter-spacing: 1px;
+      padding-top: 36px;
+    }
+    .pricing__description {
+      color: $logoColor;
+    }
+  }
+  p {
+    color: $grey;
+    padding-top: 60px;
+    padding-bottom: 9px;
+  }
+  &__button {
+    @include btnThird;
+    padding: 3px 60px;
+
+    a {
+      @include btnThirdFourthText;
+    }
+  }
+  &__button:hover {
+    background-color: transparent;
+    a {
+      color: $btnColor;
+    }
+  }
+}
+
+// FOOTER
+
+.footer {
+  padding: $primaryPadding;
+  background-color: #e7ecff;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 68px;
+    padding-bottom: 47px;
+    p {
+      color: #939ea4;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+    }
+    h3 {
+      a {
+        font-size: $ui-m;
+        color: $logoColor;
+        font-weight: 900;
+        line-height: 38px;
+      }
+    }
+    .footer__button {
+      @include btnFourth;
+      a {
+        @include btnThirdFourthText;
+      }
+    }
+    .footer__button:hover {
+      background-color: transparent;
+      a {
+        color: $btnColor;
+      }
+    }
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #cdd1d4;
+    padding-top: 20px;
+    padding-bottom: 32px;
+  }
+  &__nav {
+    display: flex;
+    li {
+      padding-right: 60px;
+      a {
+        color: $textFooterColor;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__socials {
+    display: flex;
+    align-items: center;
+    li {
+      padding-right: 30px;
+    }
+    li:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header {
+    padding: 0 10px;
+    padding-top: 10px;
+    &__logo {
+      padding-left: 50px;
+    }
+    &__btn {
+      padding: 0 10px;
+    }
+  }
+  .navigation {
+    display: none;
+    &__bar {
+      display: block;
+    }
+  }
+  .home {
+    background-image: none;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    &__content {
+      padding: 10px 10px;
+      text-align: center;
+      width: 100%;
+      h1 {
+        @include titleStyle--mobile;
+      }
+    }
+    &__buttons {
+      display: flex;
+      justify-content: center;
+    }
+    &__btn--first {
+      padding: 10px 20px;
+    }
+    &__btn--second {
+      padding: 10px 30px;
+    }
+  }
+  .main {
+    padding: 0 10px;
+  }
+  .about-us {
+    display: block;
+    padding-top: 20px;
+    text-align: center;
+    background-size: contain;
+    background-position: bottom;
+    &__description {
+      p {
+        width: 100%;
+      }
+    }
+    &__box {
+      padding-bottom: 10px;
+      width: 100%;
+    }
+    &__content {
+      p {
+        width: 100%;
+      }
+    }
+    &__img {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .services {
+    padding-top: 15px;
+    &__card {
+      text-align: center;
+      width: 100%;
+    }
+    &__card--img {
+      padding-top: 20px;
+      width: 100%;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .first_card,
+  .second_card,
+  .third_card {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .pricing {
+    padding: 0 10px;
+    padding-bottom: 50px;
+
+    h2 {
+      padding-top: 100px;
+    }
+    &__title {
+      p {
+        padding: 0;
+      }
+    }
+  }
+  .footer {
+    padding: 0 10px;
+    &__top {
+      padding: 20px 0 20px;
+    }
+    .footer__button {
+      padding: 0 15px;
+    }
+    &__bottom {
+      padding: 20px 0 20px;
+    }
+    &__nav {
+      li {
+        padding-right: 12px;
+      }
+    }
+    &__socials {
+      li {
+        padding-right: 20px;
+      }
+    }
+  }
+}
