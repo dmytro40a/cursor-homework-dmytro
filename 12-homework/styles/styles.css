@@ -16,7 +16,7 @@ p {
 }
 
 .wrapper {
-  background-image: url(/12-homework/assets/img/header_background.png);
+  background-image: url(../assets/img/header_background.png);
   background-position: top right;
   background-repeat: no-repeat;
 }
@@ -76,7 +76,7 @@ p {
 
 .home {
   display: flex;
-  background-image: url(/12-homework/assets/img/header_img.png);
+  background-image: url(../assets/img/header_img.png);
   background-position: right;
   background-repeat: no-repeat;
   padding-bottom: 430px;
@@ -233,7 +233,7 @@ p {
   padding: 0 250px;
   padding-bottom: 130px;
   text-align: center;
-  background-image: url(/12-homework/assets/img/footer_background.png);
+  background-image: url(../assets/img/footer_background.png);
   background-size: cover;
 }
 .pricing h2 {
